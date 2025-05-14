@@ -2,6 +2,8 @@ import streamlit as st
 import os
 from huffman import HuffmanCoding  # import từ file huffman.py
 
+os.makedirs('Output', exist_ok= True)
+os.makedirs('Input', exist_ok= True)
 
 def delete_files_in_directory(directory_path):
     # Kiểm tra xem thư mục có tồn tại không
