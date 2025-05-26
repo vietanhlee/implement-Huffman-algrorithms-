@@ -113,9 +113,10 @@ Gọi hàm này sau khi gộp hết các node huffman"""
         b_arr = self.get_byte_array(padded_encoded_bits)
 
         with open(output_path, 'wb') as output:
-            # Ghi thông tin bảng mã nén  Byte gốc	Độ dài mã	Mã code mã hoá dạng byte
             mapping_size = len(self.codes)
             output.write(mapping_size.to_bytes(2, 'big'))
+            
+            # Ghi thông tin bảng mã nén  Byte gốc	Độ dài mã	Mã code mã hoá dạng byte
             for byte, code in self.codes.items():
                 output.write(bytes([byte]))
                 
@@ -123,6 +124,7 @@ Gọi hàm này sau khi gộp hết các node huffman"""
                 output.write(bytes([code_length]))
                 
                 output.write(int(code, 2).to_bytes((code_length + 7) // 8, 'big'))
+            
             
             # Ghi mã nén
             output.write(b_arr)

@@ -9,5 +9,5 @@
 ```
 - **Bước 2**:
 ```python
-    streamlit run Frontend.py
+    streamlit run app.py
 ```
