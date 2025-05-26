@@ -145,7 +145,7 @@ Gọi hàm này sau khi gộp hết các node huffman"""
 
         # output_path = 'out_' + input_path[:-3] + type_of_file_output
         mapping_size = int.from_bytes(bit_data[:2], 'big')
-        print('Đã đọc xong thông tin bảng mã')
+        
         idx = 2
         
         self.codes.clear()
@@ -169,6 +169,8 @@ Gọi hàm này sau khi gộp hết các node huffman"""
             self.codes[byte] = code
             self.reverse_mapping[code] = byte
 
+        print('Đã đọc xong thông tin bảng mã')
+        
         # Phần dữ liệu nén
         encoded_bytes = bit_data[idx:] 
         bit_string = "".join(f"{b:08b}" for b in encoded_bytes)

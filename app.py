@@ -40,13 +40,13 @@ if uploaded_file is not None:
             tool.compress(input_path, output_path)
             st.success("Đã nén xong")
             with open(output_path, "rb") as f:
-                st.download_button("Tải file đã nén", f, file_name=output_path)
+                st.download_button("Tải file đã nén", f, file_name=output_path[11:])
         else:
             output_path = 'Output/out_' + os.path.splitext(uploaded_file.name)[0] + '.' + type_of_file_output
             tool.decompress(input_path, output_path)
             st.success("Đã giải nén xong!")
             with open(output_path, "rb") as f:
-                st.download_button("Tải file đã giải nén", f, file_name=output_path)
+                st.download_button("Tải file đã giải nén", f, file_name=output_path[11:])
         uploaded_file = None
 
         os.remove(input_path)
