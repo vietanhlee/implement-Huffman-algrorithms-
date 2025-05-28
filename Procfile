@@ -1,1 +1,0 @@
-web: streamlit run Frontend.py --server.port=$PORT --server.headless=true

@@ -1,3 +1,10 @@
+# Project: brief description about project
+# To fulfil the requirement of FIT Course by Pham@PTIT
+# LE VIET ANH - B23DCKH002 - 13
+# LE VAN THANH - B23DCKH109- 14
+# NGUYEN VAN LONG - B23DCKH072 - 13
+# DO TRAN HIEU - B23DCKH038 - 13
+
 import heapq
 from collections import defaultdict
 
